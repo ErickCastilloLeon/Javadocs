@@ -1,6 +1,11 @@
 import java.util.Scanner;
 
 public class InterfazPokemon {
+
+    /**
+     *@param teclado
+     * @return para intrucir datos mediante el uso del teclado
+     */
     private Scanner teclado;
 
     public InterfazPokemon() {
@@ -28,6 +33,11 @@ public class InterfazPokemon {
         mostrarJuegoSuperado();
     }
 
+    /**
+     * Este metodo muestra por pantalla al jugador oponente
+     * @return Además inicialisará el metodo Ronda
+     */
+
     private Pokemon Partida(Pokemon pokemonJugador, Pokemon pokemonRival) {
         Combate combate = new Combate(pokemonJugador, pokemonRival);
         Pokemon ganador = null;
@@ -40,6 +50,10 @@ public class InterfazPokemon {
         return ganador;
     }
 
+    /**
+     * Este metodo es para crear el pokemon como su nombre , tipo , etc.
+     * @return Permite crear el pokemon
+     */
 
     private Pokemon menuCreacionPokemonJugador() {
 
@@ -71,6 +85,11 @@ public class InterfazPokemon {
         }
     }
 
+    /**
+     * Este metodo almacena los oponentes al cual el jugador enfrentará
+     * @return Pasa al siguiente oponente
+     */
+
     public Pokemon siguientePokemonRival(int numero) {
         Pokemon rival = null;
 
@@ -88,11 +107,21 @@ public class InterfazPokemon {
         return rival;
     }
 
+    /**
+     * Mostrará por pantalla que has ganado
+     * @return Que bien ,has ganadp
+     */
+
     public static void mostrarJuegoSuperado() {
         System.out.println("++++++++++ ENHORABUENA +++++++++++");
         System.out.println("+++++ HAS SUPERADO EL JUEGO ++++++");
         System.out.println("++++ ERES UN MAESTRO POKEMON +++++");
     }
+
+    /**
+     * Mostrará por pantalla que has perdido
+     * @return Que mal ,has perdido
+     */
 
     public static void mostrarFinPartida() {
         System.out.println("++++++++++ LO SIENTO +++++++++++");
