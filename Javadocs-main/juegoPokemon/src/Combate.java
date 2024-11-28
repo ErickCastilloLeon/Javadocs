@@ -1,5 +1,15 @@
 public class Combate {
 
+
+
+    /**
+     *Este es el Main , cuyo objetivo es ejecutar programa
+     *
+     * @param pokemonJugador Es el pokemon del jugador
+     * @param pokemonRival Es el pokemon rival
+     * @return Ambos jugadores lucharan
+     *
+     */
     // Añada los atributos y el constructor *************
     Pokemon pokemonjugador;
     Pokemon pokemonRival;
@@ -9,6 +19,12 @@ public class Combate {
         pokemonjugador = jugador;
         pokemonRival = rival;
     }
+
+    /**
+     *Este metodo retornará al ganador del combate
+     *@see <a src="https://aprenderaprogramar.com/foros/index.php?topic=7889.0">Me base en el siguiente codigo</a>
+     * @return Además si el ganador e el jugador este mismo subirá de nivel
+     */
 
     public Pokemon Ronda() {
         int poderJugador = pokemonjugador.calcularPoder(pokemonRival);
@@ -27,6 +43,11 @@ public class Combate {
             return null;                         // En caso de empate, no hay ganador
         }
     }
+
+    /**
+     * Lo mismo que Ronda pero este es más en base al aguante
+     * @return si el valro de aguante de X jugador lleva a 0 el opnente ganará
+     */
 
     public Pokemon Ganador() {
         if (pokemonjugador.getAguante() <= 0 && pokemonRival.getAguante() <= 0) {
